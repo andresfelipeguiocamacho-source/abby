@@ -1,0 +1,65 @@
+{
+  "expo": {
+    "name": "AMPERIA",
+    "slug": "amperia",
+    "scheme": "amperia",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#05070D",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "co.amperia.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "AMPERIA usa tu ubicación para mostrarte la estación de carga más cercana."
+      }
+    },
+    "android": {
+      "package": "co.amperia.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#05070D",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION"],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-secure-store",
+      "expo-web-browser",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 220,
+          "resizeMode": "contain",
+          "backgroundColor": "#05070D"
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "AMPERIA usa tu ubicación para mostrarte la estación de carga más cercana."
+        }
+      ],
+      [
+        "react-native-maps",
+        {
+          "androidGoogleMapsApiKey": "REEMPLAZA_CON_TU_API_KEY_DE_GOOGLE_MAPS"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false
+    }
+  }
+}
